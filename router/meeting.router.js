@@ -1,10 +1,13 @@
+
 const express = require("express");
 const router = express.Router();
+const controller = require("../controller/meeting.controller");
+const authMiddleware = require("../middlewares/auth.middleware");
 
-// Meeting routes dosyasını import et
-const meetingRoutes = require("../routes/meetings");
-
-// Tüm meeting routes'ları kullan
-router.use("/", meetingRoutes);
+router.post("/", authMiddleware(), controller.createMeeting);
+router.put("/:meetingId", authMiddleware(), controller.updateMeeting);
+router.delete("/:meetingId", authMiddleware(), controller.deleteMeeting);
+router.get("/", authMiddleware(), controller.getMeetings);
+router.get("/:meetingId", authMiddleware(), controller.getMeetingById);
 
 module.exports = router;

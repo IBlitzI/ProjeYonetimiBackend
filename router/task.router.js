@@ -23,3 +23,5 @@ router.post("/:taskId/time/start", authMiddleware(), controller.startTimeTrackin
 router.post("/:taskId/time/stop", authMiddleware(), controller.stopTimeTracking);
 
 module.exports = router;
+
+module.exports = router;
