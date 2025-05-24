@@ -311,4 +311,3 @@ exports.getProjectTeam = async (req, res) => {
     res.status(400).json({ message: "Proje takımı getirilirken hata", error: error.message });
   }
 };
-

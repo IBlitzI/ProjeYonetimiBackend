@@ -1,5 +1,4 @@
 const express = require("express");
-const express = require("express");
 const router = express.Router();
 
 const userRouter = require("./user.router");
@@ -23,9 +22,7 @@ router.use("/auth", authRouter);
 router.use("/users", userRouter);
 
 router.use("/organizations", organizationRouter);
-router.use("/organizations", organizationRouter);
 
-router.use("/projects", projectRouter);
 router.use("/projects", projectRouter);
 
 router.use("/tasks", tasksRouter);
@@ -33,4 +30,3 @@ router.use("/tasks", tasksRouter);
 router.use("/meetings", meetingRouter);
 
 module.exports = router;
-

@@ -19,5 +19,3 @@ router.post("/:projectId/assign-member", controller.assignMemberToProject);
 router.delete("/:projectId/remove-member/:memberId", controller.removeMemberFromProject);
 
 module.exports = router;
-
-module.exports = router;
